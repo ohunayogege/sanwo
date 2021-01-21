@@ -43,3 +43,11 @@ class Counter(models.Model):
 
     def __str__(self):
         return "Counters"
+
+
+class Subscriber(models.Model):
+    email = models.EmailField(max_length=100, default='')
+    added = models.DateField(auto_now_add=True)
+
+    def __str__(self):
+        return self.email

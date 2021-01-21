@@ -764,12 +764,14 @@
                             <div class="elementor-widget-container">
                                 <div class="countdown-container">
                                     <div class="tt-countdown-wrapper style-one">
+
+                                        {% for counter in counters %}
                                         <div class="tt-countdown text-center">
                                             <div class="counter-icon">
                                                 <i aria-hidden="true" class="fas fa-users"></i>
                                             </div>
-                                            <p class="counter" data-counter="21023">
-                                                21023
+                                            <p class="counter" data-counter="{{ counter.customers }}">
+                                                {{ counter.customers }}
                                             </p>
                                             <h4 class="counter-title">
                                                 Customers
@@ -780,8 +782,8 @@
                                             <div class="counter-icon">
                                                 <i aria-hidden="true" class="fas fa-cloud-download-alt"></i>
                                             </div>
-                                            <p class="counter" data-counter="44023">
-                                                44023
+                                            <p class="counter" data-counter="{{ counter.downloads }}">
+                                                {{ counter.downloads }}
                                             </p>
                                             <h4 class="counter-title">Downloads</h4>
                                         </div>
@@ -790,8 +792,8 @@
                                             <div class="counter-icon">
                                                 <i aria-hidden="true" class="fas fa-smile"></i>
                                             </div>
-                                            <p class="counter" data-counter="35023">
-                                                35023
+                                            <p class="counter" data-counter="{{ counter.satisfied }}">
+                                                {{ counter.satisfied }}
                                             </p>
                                             <h4 class="counter-title">Satisfied</h4>
                                         </div>
@@ -800,11 +802,12 @@
                                             <div class="counter-icon">
                                                 <i aria-hidden="true" class="fas fa-mug-hot"></i>
                                             </div>
-                                            <p class="counter" data-counter="2323">
-                                                2323
+                                            <p class="counter" data-counter="{{ counter.cup_of_tea }}">
+                                                {{ counter.cup_of_tea }}
                                             </p>
                                             <h4 class="counter-title">Cup of Coffee</h4>
                                         </div>
+                                        {% endfor %}
                                     </div>
                                 </div>
                                 <!-- /.countdown-ccontainer -->
@@ -965,7 +968,7 @@
                             <div class="elementor-container elementor-column-gap-default">
                                 <div class="elementor-row">
                                     {% for team in teams %}
-                                    <div class="elementor-column elementor-col-25 elementor-inner-column elementor-element elementor-element-18e0cbc" data-id="18e0cbc" data-element_type="column">
+                                    <div class="elementor-column elementor-col-30 elementor-inner-column elementor-element elementor-element-18e0cbc" data-id="18e0cbc" data-element_type="column">
                                         <div class="elementor-column-wrap elementor-element-populated">
                                             <div class="elementor-widget-wrap">
                                                 <div class="elementor-element elementor-element-53b1715 elementor-invisible elementor-widget elementor-widget-tt-team" data-id="53b1715" data-element_type="widget" data-settings="{&quot;_animation&quot;:&quot;fadeInRight&quot;,&quot;_animation_delay&quot;:300}" data-widget_type="tt-team.default">
@@ -1034,6 +1037,13 @@
                                 </div>
                             </div>
                         </section>
+                        <div class="elementor-widget-container banner__btn">
+                            <a href="#"  target="_blank"  rel="nofollow" class="tt-app-btn btn-fill wow fadeInUp" data-wow-delay=".7s">
+                                <span class="btn-lebels">
+                                    See More
+                                </span>
+                            </a>
+                        </div>
                     </div>
                 </div>
             </div>
@@ -1045,265 +1055,213 @@
 <section class="elementor-section elementor-top-section elementor-element elementor-element-e46488c elementor-section-content-middle elementor-section-boxed elementor-section-height-default elementor-section-height-default" data-id="e46488c" data-element_type="section" data-settings="{&quot;background_background&quot;:&quot;gradient&quot;}">
     <div class="elementor-container elementor-column-gap-default">
         <div class="elementor-row">
-<div class="elementor-column elementor-col-50 elementor-top-column elementor-element elementor-element-5704f49" data-id="5704f49" data-element_type="column">
-<div class="elementor-column-wrap elementor-element-populated">
-        <div class="elementor-widget-wrap">
-    <div class="elementor-element elementor-element-58ae2a2 elementor-widget elementor-widget-apdash-heading" data-id="58ae2a2" data-element_type="widget" data-widget_type="apdash-heading.default">
-<div class="elementor-widget-container">
-
-<div class="section-heading">
-
-        <h2 class="section-title wow fadeInUp" data-wow-delay="0.3s">What Our Client Say <br>About Sanwopay</h2>
-
-        <div class="description wow fadeInUp" data-wow-delay="0.5s">Collaboratively actualize excellent schemas without effective models. Synergistically engineer functionalized.</div>
-</div>
-
-</div>
-</div>
-    </div>
-</div>
-</div>
-<div class="elementor-column elementor-col-50 elementor-top-column elementor-element elementor-element-f44b068 elementor-invisible" data-id="f44b068" data-element_type="column" data-settings="{&quot;animation&quot;:&quot;fadeInUp&quot;}">
-<div class="elementor-column-wrap elementor-element-populated">
-        <div class="elementor-widget-wrap">
-    <div class="elementor-element elementor-element-80d5624 elementor-widget elementor-widget-tt-testimonial" data-id="80d5624" data-element_type="widget" data-widget_type="tt-testimonial.default">
-<div class="elementor-widget-container">
-<div class="testimonial-wrapper">
-<div class="swiper-container tt-testimonial testimonial-style-1" data-testi="{&quot;loop&quot;:true,&quot;speed&quot;:700,&quot;autoplay&quot;:{&quot;delay&quot;:3000},&quot;pagination&quot;:{&quot;el&quot;:&quot;.swiper-pagination&quot;,&quot;clickable&quot;:true},&quot;spaceBetween&quot;:30}">
-<div class="swiper-wrapper">
-                                <div class="swiper-slide">
-    <div class="testimonial">
-                                        <div class="quote">
-                <i class="fas fa-quote-right"></i>
-            </div>
+            <div class="elementor-column elementor-col-50 elementor-top-column elementor-element elementor-element-5704f49" data-id="5704f49" data-element_type="column">
+                <div class="elementor-column-wrap elementor-element-populated">
+                    <div class="elementor-widget-wrap">
+                        <div class="elementor-element elementor-element-58ae2a2 elementor-widget elementor-widget-apdash-heading" data-id="58ae2a2" data-element_type="widget" data-widget_type="apdash-heading.default">
+                            <div class="elementor-widget-container">
+                                
+                                <div class="section-heading">
+                                    
+                                    <h2 class="section-title wow fadeInUp" data-wow-delay="0.3s">
+                                        What Our Client Say <br>About Sanwopay
+                                    </h2>
         
-        <div class="info-wrap">
-                                                <div class="avatar">
-                    <img loading="lazy" src="/static/images/10/1.jpg"
-                         alt="Mominul Islam" height="100"
-                         width="100">
+                                    <div class="description wow fadeInUp" data-wow-delay="0.5s">
+                                        Collaboratively actualize excellent schemas without effective models. Synergistically engineer functionalized.
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
                 </div>
-            
-            <div class="bio-wrapper">
-                                                        <h4 class="name">Mominul Islam</h4>
-                
-                                                        <span class="designation">Web Developer</span>
-                                                </div>
-        </div>
-
-
-        <div class="testimonial-content-inner">
-
-                                                <p>
-                    Interactively optimize fully researched expertise vis-a-vis plug-and-play relationships. Intrinsicly develop viral core competencies for fully tested customer service. Enthusiastically create next-generation growth strategies and.                                    </p>
-                                        </div>
-        <!-- /.testimonial-cotent-inner -->
-    </div>
-</div>
-<!-- /.swiper-slide -->
-                                    <div class="swiper-slide">
-    <div class="testimonial">
-                                        <div class="quote">
-                <i class="fas fa-quote-right"></i>
             </div>
+            <div class="elementor-column elementor-col-50 elementor-top-column elementor-element elementor-element-f44b068 elementor-invisible" data-id="f44b068" data-element_type="column" data-settings="{&quot;animation&quot;:&quot;fadeInUp&quot;}">
+                <div class="elementor-column-wrap elementor-element-populated">
+                    <div class="elementor-widget-wrap">
+                        <div class="elementor-element elementor-element-80d5624 elementor-widget elementor-widget-tt-testimonial" data-id="80d5624" data-element_type="widget" data-widget_type="tt-testimonial.default">
+                            <div class="elementor-widget-container">
+                                <div class="testimonial-wrapper">
+                                    <div class="swiper-container tt-testimonial testimonial-style-1" data-testi="{&quot;loop&quot;:true,&quot;speed&quot;:700,&quot;autoplay&quot;:{&quot;delay&quot;:3000},&quot;pagination&quot;:{&quot;el&quot;:&quot;.swiper-pagination&quot;,&quot;clickable&quot;:true},&quot;spaceBetween&quot;:30}">
+                                        <div class="swiper-wrapper">
+                                            {% for testifier in testimonies %}
+                                            <div class="swiper-slide">
+                                                <div class="testimonial">
+                                                    <div class="quote">
+                                                        <i class="fas fa-quote-right"></i>
+                                                    </div>
         
-        <div class="info-wrap">
-                                                <div class="avatar">
-                    <img loading="lazy" src="/static/images/10/2.jpg"
-                         alt="John Charles" height="100"
-                         width="100">
-                </div>
+                                                    <div class="info-wrap">
+                                                        <div class="avatar">
+                                                            <img loading="lazy" src="{{ testifier.photo.url }}" alt="{{ testifier.name }}" height="100" width="100">
+                                                        </div>
             
-            <div class="bio-wrapper">
-                                                        <h4 class="name">John Charles</h4>
-                
-                                                        <span class="designation">UI/UX Designer</span>
-                                                </div>
-        </div>
-
-
-        <div class="testimonial-content-inner">
-
-                                                <p>
-                    Interactively optimize fully researched expertise vis-a-vis plug-and-play relationships. Intrinsicly develop viral core competencies for fully tested customer service. Enthusiastically create next-generation growth strategies and.                                    </p>
-                                        </div>
-        <!-- /.testimonial-cotent-inner -->
-    </div>
-</div>
-<!-- /.swiper-slide -->
-                                    <div class="swiper-slide">
-    <div class="testimonial">
-                                        <div class="quote">
-                <i class="fas fa-quote-right"></i>
-            </div>
+                                                        <div class="bio-wrapper">
+                                                            <h4 class="name">{{ testifier.name }}</h4>
+                                                            <span class="designation">{{ testifier.job_title }}</span>
+                                                        </div>
+                                                    </div>
         
-        <div class="info-wrap">
-                                                <div class="avatar">
-                    <img loading="lazy" src="/static/images/10/4.jpg"
-                         alt="John Charles" height="100"
-                         width="100">
-                </div>
-            
-            <div class="bio-wrapper">
-                                                        <h4 class="name">John Charles</h4>
-                
-                                                        <span class="designation">UI/UX Designer</span>
-                                                </div>
-        </div>
-
-
-        <div class="testimonial-content-inner">
-
-                                                <p>
-                    Interactively optimize fully researched expertise vis-a-vis plug-and-play relationships. Intrinsicly develop viral core competencies for fully tested customer service. Enthusiastically create next-generation growth strategies and.                                    </p>
-                                        </div>
-        <!-- /.testimonial-cotent-inner -->
-    </div>
-</div>
-<!-- /.swiper-slide -->
-                                    <div class="swiper-slide">
-    <div class="testimonial">
-                                        <div class="quote">
-                <i class="fas fa-quote-right"></i>
-            </div>
         
-        <div class="info-wrap">
-                                                <div class="avatar">
-                    <img loading="lazy" src="/static/images/10/3.jpg"
-                         alt="John Charles" height="100"
-                         width="100">
-                </div>
-            
-            <div class="bio-wrapper">
-                                                        <h4 class="name">John Charles</h4>
-                
-                                                        <span class="designation">UI/UX Designer</span>
+                                                    <div class="testimonial-content-inner">
+                                                        <p>
+                                                            {{ testifier.testimony }}
+                                                        </p>
+                                                    </div>
+                                                    <!-- /.testimonial-cotent-inner -->
                                                 </div>
-        </div>
+                                            </div>
+                                            <!-- /.swiper-slide -->
+                                            {% endfor %}
 
-
-        <div class="testimonial-content-inner">
-
-                                                <p>
-                    Interactively optimize fully researched expertise vis-a-vis plug-and-play relationships. Intrinsicly develop viral core competencies for fully tested customer service. Enthusiastically create next-generation growth strategies and.                                    </p>
                                         </div>
-        <!-- /.testimonial-cotent-inner -->
-    </div>
-</div>
-<!-- /.swiper-slide -->
-    </div>
-<!-- /.swiper-wrapper -->
-</div>
-<div class="swiper-pagination"></div>
-</div>
-<!-- /.testimonial-wrapper -->
-</div>
-</div>
-    </div>
-</div>
-</div>
+                                        <!-- /.swiper-wrapper -->
+                                    </div>
+                                    <div class="swiper-pagination"></div>
+                                </div>
+                                <!-- /.testimonial-wrapper -->
+                            </div>
+                        </div>
+                    </div>
+                </div>
             </div>
-</div>
+        </div>
+    </div>
 </section>
 <!--// End Section -->
 
 <section class="elementor-section elementor-top-section elementor-element elementor-element-b7de66c elementor-section-content-middle elementor-section-boxed elementor-section-height-default elementor-section-height-default" data-id="b7de66c" data-element_type="section" id="contact">
     <div class="elementor-container elementor-column-gap-default">
         <div class="elementor-row">
-<div class="elementor-column elementor-col-50 elementor-top-column elementor-element elementor-element-01a7e1c" data-id="01a7e1c" data-element_type="column">
-<div class="elementor-column-wrap elementor-element-populated">
-        <div class="elementor-widget-wrap">
-    <div class="elementor-element elementor-element-d5b27fc elementor-widget elementor-widget-apdash-heading" data-id="d5b27fc" data-element_type="widget" data-widget_type="apdash-heading.default">
-<div class="elementor-widget-container">
+            <div class="elementor-column elementor-col-50 elementor-top-column elementor-element elementor-element-01a7e1c" data-id="01a7e1c" data-element_type="column">
+                <div class="elementor-column-wrap elementor-element-populated">
+                    <div class="elementor-widget-wrap">
+                        <div class="elementor-element elementor-element-d5b27fc elementor-widget elementor-widget-apdash-heading" data-id="d5b27fc" data-element_type="widget" data-widget_type="apdash-heading.default">
+                            <div class="elementor-widget-container">
+                                
+                                <div class="section-heading">
+                                    
+                                    <h2 class="section-title wow fadeInUp" data-wow-delay="0.3s">
+                                        Looking for a excellent Business idea?
+                                    </h2>
+        
+                                    <div class="description wow fadeInUp" data-wow-delay="0.5s">
+                                        Give us a call or drop by anytime, we endeavour to answer all enquiries within 24 hours on business days.
+                                    </div>
+                                </div>
 
-<div class="section-heading">
+                            </div>
+                        </div>
+                        <div class="elementor-element elementor-element-a290328 elementor-widget-divider--view-line elementor-widget elementor-widget-divider" data-id="a290328" data-element_type="widget" data-widget_type="divider.default">
+                            <div class="elementor-widget-container">
+                                <div class="elementor-divider">
+                                    <span class="elementor-divider-separator"></span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="elementor-element elementor-element-089fc74 elementor-invisible elementor-widget elementor-widget-tt-icon-box" data-id="089fc74" data-element_type="widget" data-settings="{&quot;_animation&quot;:&quot;fadeInUp&quot;,&quot;_animation_delay&quot;:500}" data-widget_type="tt-icon-box.default">
+                            <div class="elementor-widget-container">
+                                <div class="tt-icon-box style-six with-image ">
+                                    <div class="icon-container">
+                                        <i aria-hidden="true" class="fas fa-location-arrow"></i>
+                                    </div>
+                                    <!-- /.icon-container -->
 
-        <h2 class="section-title wow fadeInUp" data-wow-delay="0.3s">Looking for a excellent Business idea?</h2>
+                                    <div class="box-content">
+                                        <h4 class="box-title">
+                                            Company Location
+                                        </h4>
+                                        <p class="description">
+                                            100 Yellow House, Mn Factory, United State, 13420
+                                        </p>
+                                    </div>
+                                </div>
+                                <!-- /.dt-icon-box -->
+                            </div>
+                        </div>
+                        <div class="elementor-element elementor-element-d953c9d elementor-invisible elementor-widget elementor-widget-tt-icon-box" data-id="d953c9d" data-element_type="widget" data-settings="{&quot;_animation&quot;:&quot;fadeInUp&quot;,&quot;_animation_delay&quot;:700}" data-widget_type="tt-icon-box.default">
+                            <div class="elementor-widget-container">
+                                <div class="tt-icon-box style-six with-image ">
+                                    <div class="icon-container">
+                                        <i aria-hidden="true" class="fas fa-envelope"></i>
+                                    </div>
+                                    <!-- /.icon-container -->
 
-        <div class="description wow fadeInUp" data-wow-delay="0.5s">Give us a call or drop by anytime, we endeavour to answer all enquiries within 24 hours on business days.</div>
-</div>
+                                    <div class="box-content">
+                                        <h4 class="box-title">
+                                            Email Address
+                                        </h4>
+                                        <p class="description">
+                                            contact@sanwopay.com
+                                        </p>
+                                    </div>
 
-</div>
-</div>
-<div class="elementor-element elementor-element-a290328 elementor-widget-divider--view-line elementor-widget elementor-widget-divider" data-id="a290328" data-element_type="widget" data-widget_type="divider.default">
-<div class="elementor-widget-container">
-<div class="elementor-divider">
-<span class="elementor-divider-separator">
-    </span>
-</div>
-</div>
-</div>
-<div class="elementor-element elementor-element-089fc74 elementor-invisible elementor-widget elementor-widget-tt-icon-box" data-id="089fc74" data-element_type="widget" data-settings="{&quot;_animation&quot;:&quot;fadeInUp&quot;,&quot;_animation_delay&quot;:500}" data-widget_type="tt-icon-box.default">
-<div class="elementor-widget-container">
-<div class="tt-icon-box style-six with-image ">
-<div class="icon-container">
-<i aria-hidden="true" class="fas fa-location-arrow"></i>        </div>
-<!-- /.icon-container -->
+                                </div>
+                                <!-- /.dt-icon-box -->
+                            </div>
+                        </div>
+                        <div class="elementor-element elementor-element-d953c9d elementor-invisible elementor-widget elementor-widget-tt-icon-box" data-id="d953c9d" data-element_type="widget" data-settings="{&quot;_animation&quot;:&quot;fadeInUp&quot;,&quot;_animation_delay&quot;:700}" data-widget_type="tt-icon-box.default">
+                            <div class="elementor-widget-container">
+                                <div class="tt-icon-box style-six with-image ">
+                                    <div class="icon-container">
+                                        <i aria-hidden="true" class="fas fa-phone"></i>
+                                    </div>
+                                    <!-- /.icon-container -->
 
-<div class="box-content">
-<h4 class="box-title">
-                Company Location                            </h4>
+                                    <div class="box-content">
+                                        <h4 class="box-title">
+                                            Phone Numbers
+                                        </h4>
+                                        <p class="description">
+                                            08165793298, 07015262102
+                                        </p>
+                                    </div>
 
-<p class="description">
-100 Yellow House, Mn Factory, United State, 13420            </p>
-</div>
-
-</div>
-<!-- /.dt-icon-box -->		</div>
-</div>
-<div class="elementor-element elementor-element-d953c9d elementor-invisible elementor-widget elementor-widget-tt-icon-box" data-id="d953c9d" data-element_type="widget" data-settings="{&quot;_animation&quot;:&quot;fadeInUp&quot;,&quot;_animation_delay&quot;:700}" data-widget_type="tt-icon-box.default">
-<div class="elementor-widget-container">
-<div class="tt-icon-box style-six with-image ">
-<div class="icon-container">
-<i aria-hidden="true" class="fas fa-envelope"></i>        </div>
-<!-- /.icon-container -->
-
-<div class="box-content">
-<h4 class="box-title">
-                Email Address                            </h4>
-
-<p class="description">
-hello@yourdomain.com            </p>
-</div>
-
-</div>
-<!-- /.dt-icon-box -->		</div>
-</div>
-    </div>
-</div>
-</div>
-<div class="elementor-column elementor-col-50 elementor-top-column elementor-element elementor-element-4bf2a7f" data-id="4bf2a7f" data-element_type="column">
-<div class="elementor-column-wrap elementor-element-populated">
-        <div class="elementor-widget-wrap">
-    <div class="elementor-element elementor-element-79d1e86 elementor-invisible elementor-widget elementor-widget-dt-contact-form" data-id="79d1e86" data-element_type="widget" data-settings="{&quot;_animation&quot;:&quot;fadeInUp&quot;,&quot;_animation_delay&quot;:300}" data-widget_type="dt-contact-form.default">
-<div class="elementor-widget-container">
-<div class="contact-form contact-form-boxed">
-<div role="form" class="wpcf7" id="wpcf7-f6-p120-o1" lang="en-US" dir="ltr">
-<div class="screen-reader-response"><p role="status" aria-live="polite" aria-atomic="true"></p> <ul></ul></div>
-<form action="https://apdash-wp.themetags.com/home-two/#wpcf7-f6-p120-o1" method="post" class="wpcf7-form init" novalidate="novalidate" data-status="init">
-<div style="display: none;">
-<input type="hidden" name="_wpcf7" value="6" />
-<input type="hidden" name="_wpcf7_version" value="5.3.1" />
-<input type="hidden" name="_wpcf7_locale" value="en_US" />
-<input type="hidden" name="_wpcf7_unit_tag" value="wpcf7-f6-p120-o1" />
-<input type="hidden" name="_wpcf7_container_post" value="120" />
-<input type="hidden" name="_wpcf7_posted_data_hash" value="" />
-</div>
-<div class="apdash-contact-form">
-<span class="wpcf7-form-control-wrap name-12"><input type="text" name="name-12" value="" size="40" class="wpcf7-form-control wpcf7-text wpcf7-validates-as-required" aria-required="true" aria-invalid="false" placeholder="Your Name" /></span><br />
-<span class="wpcf7-form-control-wrap email-43"><input type="email" name="email-43" value="" size="40" class="wpcf7-form-control wpcf7-text wpcf7-email wpcf7-validates-as-required wpcf7-validates-as-email" aria-required="true" aria-invalid="false" placeholder="Your Email" /></span><br />
-<span class="wpcf7-form-control-wrap your-subject"><input type="text" name="your-subject" value="" size="40" class="wpcf7-form-control wpcf7-text" aria-invalid="false" placeholder="Subject" /></span><br />
-<span class="wpcf7-form-control-wrap your-message"><textarea name="your-message" cols="40" rows="10" class="wpcf7-form-control wpcf7-textarea" aria-invalid="false" placeholder="Message"></textarea></span><br />
-<input type="submit" value="Send Message" class="wpcf7-form-control wpcf7-submit tt-btn btn-round" /></div>
-<div class="wpcf7-response-output" aria-hidden="true"></div></form></div>
-</div>
-</div>
-</div>
-    </div>
-</div>
-</div>
+                                </div>
+                                <!-- /.dt-icon-box -->
+                            </div>
+                        </div>
+                    </div>
+                </div>
             </div>
-</div>
+            <div class="elementor-column elementor-col-50 elementor-top-column elementor-element elementor-element-4bf2a7f" data-id="4bf2a7f" data-element_type="column">
+                <div class="elementor-column-wrap elementor-element-populated">
+                    <div class="elementor-widget-wrap">
+                        <div class="elementor-element elementor-element-79d1e86 elementor-invisible elementor-widget elementor-widget-dt-contact-form" data-id="79d1e86" data-element_type="widget" data-settings="{&quot;_animation&quot;:&quot;fadeInUp&quot;,&quot;_animation_delay&quot;:300}" data-widget_type="dt-contact-form.default">
+                            <div class="elementor-widget-container">
+                                <div class="contact-form contact-form-boxed">
+                                    <div role="form" class="wpcf7" id="wpcf7-f6-p120-o1" lang="en-US" dir="ltr">
+                                        <div class="screen-reader-response">
+                                            <p role="status" aria-live="polite" aria-atomic="true"></p>
+                                            <ul></ul>
+                                        </div>
+                                        <form id="formContact" class="wpcf7-form init" novalidate="novalidate" data-status="init">
+                                            <div class="apdash-contact-form">
+                                                <span class="wpcf7-form-control-wrap name-12">
+                                                    <input type="text" id="name" class="wpcf7-form-control wpcf7-text wpcf7-validates-as-required" placeholder="Your Name" required="required" />
+                                                </span><br />
+                                                <span class="wpcf7-form-control-wrap email-43">
+                                                    <input type="email" id="email" class="wpcf7-form-control wpcf7-text wpcf7-email wpcf7-validates-as-required wpcf7-validates-as-email" aria-required="true" aria-invalid="false" placeholder="Your Email" required />
+                                                </span><br />
+                                                <span class="wpcf7-form-control-wrap your-subject">
+                                                    <input type="text" id="subject" class="wpcf7-form-control wpcf7-text" aria-invalid="false" placeholder="Subject" required />
+                                                </span><br />
+                                                <span class="wpcf7-form-control-wrap your-message">
+                                                    <textarea id="message" cols="40" rows="10" class="wpcf7-form-control wpcf7-textarea" aria-invalid="false" placeholder="Message" required></textarea>
+                                                </span><br />
+                                                <input id="submitMessage" type="submit" value="Send Message" class="wpcf7-form-control wpcf7-submit tt-btn btn-round" />
+                                            </div>
+                                            <div class="wpcf7-response-output alert" aria-hidden="true"></div>
+                                        </form>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
 </section>
 
 <!--// End Section -->
@@ -1311,56 +1269,128 @@ hello@yourdomain.com            </p>
 <section class="elementor-section elementor-top-section elementor-element elementor-element-cb81f87 elementor-section-boxed elementor-section-height-default elementor-section-height-default elementor-invisible" data-id="cb81f87" data-element_type="section" data-settings="{&quot;background_background&quot;:&quot;classic&quot;,&quot;animation&quot;:&quot;fadeInUp&quot;}">
     <div class="elementor-container elementor-column-gap-default">
         <div class="elementor-row">
-<div class="elementor-column elementor-col-100 elementor-top-column elementor-element elementor-element-55b8511" data-id="55b8511" data-element_type="column">
-<div class="elementor-column-wrap elementor-element-populated">
-        <div class="elementor-widget-wrap">
-    <div class="elementor-element elementor-element-5f478b8 elementor-widget elementor-widget-tt-newsletter" data-id="5f478b8" data-element_type="widget" data-widget_type="tt-newsletter.default">
-<div class="elementor-widget-container">
+            <div class="elementor-column elementor-col-100 elementor-top-column elementor-element elementor-element-55b8511" data-id="55b8511" data-element_type="column">
+                <div class="elementor-column-wrap elementor-element-populated">
+                    <div class="elementor-widget-wrap">
+                        <div class="elementor-element elementor-element-5f478b8 elementor-widget elementor-widget-tt-newsletter" data-id="5f478b8" data-element_type="widget" data-widget_type="tt-newsletter.default">
+                            <div class="elementor-widget-container">
+                                
+                                <div class="newsletter" id="newsletter">
+                                    <div class="container">
+                                        <div class="row">
+                                            <div class="col-lg-7">
+                                                <div class="section-heading">
+                                                    <h2 class="section-title">
+                                                        Subscribe our Newsletter
+                                                    </h2>
+                                                    <h3 class="subtitle">
+                                                        We’re a team of non-cynics who truly care for our work.
+                                                    </h3>
+                                                </div>
+                                                <!-- /.newsletter-content -->
+                                            </div>
 
-<div class="newsletter" id="newsletter">
-<div class="container">
-<div class="row">
-<div class="col-lg-7">
-    <div class="section-heading">
-                                        <h2 class="section-title">
-                Subscribe our Newsletter                                </h2>
+                                            <div class="col-lg-5">
+                                                <form id="newsletter" class="newsletter-form wow pixFadeUp" data-apdash-form="newsletter-subscribe">
+                                                    <div class="newsletter-inner form-row justify-content-center">
+                                                        <input type="email" class="form-control" id="newsletter-email"  placeholder="Enter Your Email*" required>
+                                                        <button type="submit" id="newsletter-submit" class="newsletter-submit">
+                                                            <i class="fas fa-paper-plane"></i>
+                                                            <i class="fa fa-circle-o-notch fa-spin"></i>
+                                                        </button>
+                                                    </div>
         
-                                         <h3 class="subtitle">We’re a team of non-cynics who truly care for our work.</h3>
+                                                    <div class="form-result alert">
+                                                        <div class="content"></div>
+                                                    </div><!-- /.form-result-->
+                                                </form><!-- /.newsletter-form -->
+                                            </div>
+                                        </div>
+                                        <!-- /.row -->
+                                    </div>
+                                    <!-- /.container -->
                                 </div>
-    <!-- /.newsletter-content -->
-</div>
-
-<div class="col-lg-5">
-    <form action="https://apdash-wp.themetags.com/wp-admin/admin-ajax.php" method="post" class="newsletter-form wow pixFadeUp" data-apdash-form="newsletter-subscribe">
-        <input type="hidden" name="action" value="apdash_mailchimp_subscribe">
-
-        <div class="newsletter-inner form-row justify-content-center">
-            <input type="email" name="email" class="form-control" id="newsletter-form-email"  placeholder="Enter Your Email*" required>
-
-            <button type="submit" name="submit" id="newsletter-submit" class="newsletter-submit">
-                <i class="fas fa-paper-plane"></i>
-                <i class="fa fa-circle-o-notch fa-spin"></i>
-            </button>
-        </div>
-
-        <div class="form-result alert">
-            <div class="content"></div>
-        </div><!-- /.form-result-->
-    </form><!-- /.newsletter-form -->
-</div>
-</div>
-<!-- /.row -->
-</div>
-<!-- /.container -->
-</div>
-<!-- /.newsletter -->
-</div>
-</div>
-    </div>
-</div>
-</div>
+                                <!-- /.newsletter -->
+                            </div>
+                        </div>
+                    </div>
+                </div>
             </div>
-</div>
+        </div>
+    </div>
 </section>
+
+<script src="/static/jquery/jquery.min.js"></script>
+<script type="text/javascript">
+    $("#newsletter").on('submit', function(e){
+        e.preventDefault();
+        $.ajax({
+            type : "POST",
+               url: "{% url 'newsletter_subscribe' %}", /* django ajax posting url  */
+               data: {
+                email : $('#newsletter-email').val(),
+                csrfmiddlewaretoken: '{{ csrf_token }}',
+                dataType: "json",
+
+               },
+               
+               success: function(data){
+                if (data.error){
+                    $('.form-result').addClass('alert-danger').removeClass('alert-warning alert-success').css('display', 'block');
+                    $('.form-result > .content').html(data.error);
+                    $('button[type="submit"]').removeClass('clicked');
+                    // $('#output').html(data.error) /* response message */
+                }
+                else{
+                    $('.form-result').addClass('alert-success').removeClass('alert-warning alert-danger').css('display', 'block');
+                    $('.form-result > .content').html(data.success);
+                    $('button[type="submit"]').removeClass('clicked');
+                }
+                
+               },
+
+               failure: function() {
+                   
+               }
+        });
+    });
+
+    $("#formContact").on('submit', function(e){
+        e.preventDefault();
+
+        $.ajax({
+            type : "POST",
+               url: "{% url 'contact_us' %}", /* django ajax posting url  */
+               data: {
+                email : $('#email').val(),
+                name : $('#name').val(),
+                subject : $('#subject').val(),
+                message : $('#message').val(),
+                csrfmiddlewaretoken: '{{ csrf_token }}',
+                dataType: "json",
+
+               },
+               
+               success: function(data){
+                if (data.error){
+                    $('.wpcf7-response-output').addClass('alert-danger').removeClass('alert-success').css('display', 'block');
+                    $('.wpcf7-response-output').html(data.error);
+                    $('button[type="submit"]').removeClass('clicked');
+                    // $('#output').html(data.error) /* response message */
+                }
+                else{
+                    $('.wpcf7-response-output').addClass('alert-success').removeClass('alert-danger').css('display', 'block');
+                    $('.wpcf7-response-output').html(data.success);
+                    $('button[type="submit"]').removeClass('clicked');
+                }
+                
+               },
+
+               failure: function() {
+                   
+               }
+        });
+    });
+</script>
 
 {% endblock %}

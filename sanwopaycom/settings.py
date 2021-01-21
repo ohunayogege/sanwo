@@ -46,7 +46,7 @@ ROOT_URLCONF = 'sanwopaycom.urls'
 TEMPLATES = [
     {
         'BACKEND': 'django.template.backends.django.DjangoTemplates',
-        'DIRS': [],
+        'DIRS': [os.path.join(BASE_DIR, 'mail'),],
         'APP_DIRS': True,
         'OPTIONS': {
             'context_processors': [
@@ -114,3 +114,14 @@ STATIC_ROOT = os.path.join(BASE_DIR, "website/static/")
 
 MEDIA_ROOT = ''
 MEDIA_URL = ''
+
+
+SITE_NAME = "Sanwopay"
+SITE_URL = 'http://localhost/'
+
+DEFAULT_EMAIL_SENDER = 'Sanwopay Newsletter Team <newsletter-team@sanwopay.com>'
+EMAIL_BACKEND = "django.core.mail.backends.filebased.EmailBackend"
+EMAIL_FILE_PATH = os.path.join(BASE_DIR, "inbox")
+
+# EMAIL_BACKEND = "sgbackend.SendGridBackend"
+# SENDGRID_API_KEY = config("SENDGRID_API_KEY")

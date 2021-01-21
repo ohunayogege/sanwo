@@ -416,7 +416,7 @@ var THEMETAGS = THEMETAGS || {};
         /*===========================*/
 
         contactFrom: function () {
-            $('[data-apdash-form]').each(function () {
+            $('[data-apdash-form-error]').each(function () {
                 var $this = $(this);
                 $('.form-result', $this).css('display', 'none');
 
