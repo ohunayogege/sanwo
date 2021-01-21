@@ -1,5 +1,10 @@
+from website.models import Team
 from django.shortcuts import render
 
 
 def home(request):
-    return render(request, 'index.html')
+    teams = Team.objects.all()
+    context = {
+        'teams': teams
+    }
+    return render(request, 'index.html', context)
