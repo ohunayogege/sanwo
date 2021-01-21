@@ -2232,20 +2232,21 @@ nav.wp-calendar-nav {
 
 .screenshot-slider img {
   box-shadow: 0 4px 10px 0 rgba(0, 0, 0, 0.12) !important;
-  border-radius: 30px !important; }
+  border-radius: 30px !important;
+ }
 
 .elementor .screenshot-frame {
   position: absolute;
-  width: 280px;
+  width: 255px;
   left: 50%;
   transform: translateX(-50%);
   z-index: 2;
-  height: 480px;
-  top: 11px; }
+  height: 520px;
+  top: 23px; }
   .elementor .screenshot-frame img {
     height: 100%;
     width: 100%;
-    object-fit: fill; }
+    object-fit: contain; }
   @media (max-width: 1200px) {
     .elementor .screenshot-frame {
       width: 240px;
