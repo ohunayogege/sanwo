@@ -121,7 +121,7 @@ select,
 optgroup,
 textarea {
   color: #696969;
-  font-family: "Roboto", sans-serif;
+  font-family: "Poppins", sans-serif;
   font-size: 16px;
   line-height: 1.5; }
 
@@ -132,7 +132,7 @@ a {
 
 h1, h2, h3, h4, h5, h6, .h1, .h2, .h3, .h4, .h5, .h6 {
   clear: both;
-  font-family: "Montserrat", sans-serif;
+  font-family: "Poppins", sans-serif;
   line-height: 1.2em;
   font-weight: 700;
   color: #0c1a35; }
@@ -174,7 +174,7 @@ address {
 
 pre {
   background: #eee;
-  font-family: "Courier 10 Pitch", Courier, monospace;
+  font-family: "Poppins", Courier, monospace;
   line-height: 1.6;
   margin-bottom: 1.6em;
   max-width: 100%;
@@ -215,6 +215,7 @@ body {
   background: #fff;
   position: relative;
   font-size: 16px;
+  font-family: 'Poppins';
   font-weight: 400;
   line-height: 1.75;
   overflow-x: hidden;
@@ -367,28 +368,28 @@ p {
       font-size: 1rem; } }
 
 @font-face {
-  font-family: "Apdash";
-  src: url("assets/fonts/Apdash.eot");
-  src: url("assets/fonts/Apdash.eot?#iefix") format("embedded-opentype"), url("assets/fonts/Apdash.woff2") format("woff2"), url("assets/fonts/Apdash.woff") format("woff"), url("assets/fonts/Apdash.ttf") format("truetype"), url("assets/fonts/Apdash.svg#Apdash") format("svg");
+  font-family: "Poppins";
+  src: url("https://fonts.googleapis.com/css?family=Poppins");
+  /* src: url("/static/assets/fonts/poppins-400.ttf") format("truetype"); */
   font-weight: normal;
   font-style: normal; }
 
 @media screen and (-webkit-min-device-pixel-ratio: 0) {
   @font-face {
-    font-family: "Apdash";
-    src: url("Apdash.html#Apdash") format("svg"); } }
+    font-family: "Poppins";
+    src: url("https://fonts.googleapis.com/css?family=Poppins"); } }
 
-[class^="apdash-"]:before,
-[class*=" apdash-"]:before,
-[class^="apdash-"]:after,
-[class*=" apdash-"]:after {
-  font-family: Apdash;
+[class^="sanwo-"]:before,
+[class*=" sanwo-"]:before,
+[class^="sanwo-"]:after,
+[class*=" sanwo-"]:after {
+  font-family: "Poppins";
   font-style: normal; }
 
-.apdash-right:before {
+.sanwo-right:before {
   content: "\f100"; }
 
-.apdash-left:before {
+.sanwo-left:before {
   content: "\f101"; }
 
 strong,
@@ -925,7 +926,8 @@ nav.wp-calendar-nav {
         font-size: 34px; } }
     @media (max-width: 768px) {
       .banner__title {
-        font-size: 30px; } }
+        font-size: 30px;
+       } }
   .banner__description {
     color: #fff;
     font-weight: 400;
@@ -971,7 +973,25 @@ nav.wp-calendar-nav {
           font-size: 55px; } }
       @media (max-width: 991px) {
         .banner--two .banner__title {
-          font-size: 40px; } }
+          font-size: 40px;
+          background-color: #000;
+          /* Fallback: Set a background color. */
+          background-color: #333;
+          
+          /* Create the gradient. */
+          background-image: linear-gradient(45deg, #0122af, #fff);
+          
+          /* Set the background size and repeat properties. */
+          background-size: 100%;
+          background-repeat: repeat;
+
+          /* Use the text as a mask for the background. */
+          /* This will show the gradient as a text color rather than element bg. */
+          -webkit-background-clip: text;
+          -webkit-text-fill-color: transparent; 
+          -moz-background-clip: text;
+          -moz-text-fill-color: transparent;
+        } }
     .banner--two p {
       color: #696969; }
     .banner--two .shape-bg-image {
@@ -2212,7 +2232,7 @@ nav.wp-calendar-nav {
   font-size: 18px;
   color: #0c1a35;
   margin-bottom: 10px;
-  font-family: "Montserrat", sans-serif;
+  font-family: "Poppins", sans-serif;
   display: inline-block; }
 
 .elementor .elementor-progress-percentage-outside .elementor-progress-percentage {
@@ -3066,7 +3086,7 @@ nav.wp-calendar-nav {
       .cta_style_2 .cta_part_content .cu_btn img {
         margin-left: 12px; }
   .cta_style_2.cta_style_2 h5 {
-    font-family: "Montserrat", sans-serif;
+    font-family: "Poppins", sans-serif;
     margin-bottom: 5px; }
   .cta_style_2.cta_style_2 h2 {
     margin-bottom: 33px; }
@@ -3103,7 +3123,7 @@ nav.wp-calendar-nav {
     text-align: center; }
   .hire_section .btn_1 {
     margin-top: 41px;
-    font-family: "Montserrat", sans-serif;
+    font-family: "Poppins", sans-serif;
     text-transform: capitalize;
     letter-spacing: 1pt;
     border: 1px solid rgba(255, 255, 255, 0.3); }
@@ -3812,28 +3832,28 @@ textarea {
   .post-password-form input[type="submit"]:hover {
     background: #0c1a35; }
 
-.apdash-contact-form {
+.sanwo-contact-form {
   max-width: 950px;
   margin: 0 auto; }
-  .apdash-contact-form input:not([type='checkbox']):not([type='submit']), .apdash-contact-form textarea {
+  .sanwo-contact-form input:not([type='checkbox']):not([type='submit']), .sanwo-contact-form textarea {
     background: #eee;
     border-radius: 4px;
     height: 56px;
     border: 1px solid #eee; }
-    .apdash-contact-form input:not([type='checkbox']):not([type='submit']):focus, .apdash-contact-form textarea:focus {
+    .sanwo-contact-form input:not([type='checkbox']):not([type='submit']):focus, .sanwo-contact-form textarea:focus {
       background: transparent;
       border-color: #0122af; }
-  .apdash-contact-form textarea {
+  .sanwo-contact-form textarea {
     height: 140px !important;
     background: #eee;
     border: 1px solid #eee;
     border-radius: 4px; }
-    .apdash-contact-form textarea:focus {
+    .sanwo-contact-form textarea:focus {
       background: transparent;
       border-color: #0122af; }
-  .apdash-contact-form .at-btn {
+  .sanwo-contact-form .at-btn {
     border: 1px solid #0122af; }
-  .apdash-contact-form .wpcf7-response-output {
+  .sanwo-contact-form .wpcf7-response-output {
     max-width: 950px;
     margin: 0 auto; }
 
@@ -4806,30 +4826,30 @@ a {
   margin-top: 20px; }
 
 /* Recent Post */
-.apdash-widget-recent-posts {
+.sanwo-widget-recent-posts {
   display: flex;
   flex-wrap: wrap;
   margin-bottom: 20px; }
-  .apdash-widget-recent-posts .recent-posts-image_wrapper {
+  .sanwo-widget-recent-posts .recent-posts-image_wrapper {
     width: 85px;
     margin-right: 20px;
     border-radius: 4px;
     overflow: hidden; }
-    .apdash-widget-recent-posts .recent-posts-image_wrapper img {
+    .sanwo-widget-recent-posts .recent-posts-image_wrapper img {
       border-radius: 4px; }
-  .apdash-widget-recent-posts .recent-posts-content_wrapper {
+  .sanwo-widget-recent-posts .recent-posts-content_wrapper {
     flex: 1; }
-  .apdash-widget-recent-posts .post-title {
+  .sanwo-widget-recent-posts .post-title {
     font-weight: 600;
     margin-bottom: 5px;
     font-size: 16px;
     line-height: 1.6; }
-    .apdash-widget-recent-posts .post-title a {
+    .sanwo-widget-recent-posts .post-title a {
       color: #0c1a35;
       line-height: 1.2; }
-      .apdash-widget-recent-posts .post-title a:hover {
+      .sanwo-widget-recent-posts .post-title a:hover {
         color: #0122af; }
-  .apdash-widget-recent-posts .meta-wrapper span {
+  .sanwo-widget-recent-posts .meta-wrapper span {
     color: #696969;
     font-size: 18px; }
 
@@ -5413,8 +5433,8 @@ blockquote {
     left: 40px;
     top: 20px;
     background-color: #0122af;
-    -webkit-mask-image: url(https://apdash-wp.themetags.com/wp-content/themes/apdash/assets/images/quote-2.svg);
-    mask-image: url(https://apdash-wp.themetags.com/wp-content/themes/apdash/assets/images/quote-2.svg);
+    -webkit-mask-image: url(https://sanwo-wp.themetags.com/wp-content/themes/sanwo/assets/images/quote-2.svg);
+    mask-image: url(https://sanwo-wp.themetags.com/wp-content/themes/sanwo/assets/images/quote-2.svg);
     -webkit-mask-size: cover;
     width: 35px;
     height: 35px;
@@ -5425,8 +5445,8 @@ blockquote {
     content: '';
     position: absolute;
     background-color: #0122af;
-    -webkit-mask-image: url(https://apdash-wp.themetags.com/wp-content/themes/apdash/assets/images/quote.svg);
-    mask-image: url(https://apdash-wp.themetags.com/wp-content/themes/apdash/assets/images/quote.svg);
+    -webkit-mask-image: url(https://sanwo-wp.themetags.com/wp-content/themes/sanwo/assets/images/quote.svg);
+    mask-image: url(https://sanwo-wp.themetags.com/wp-content/themes/sanwo/assets/images/quote.svg);
     -webkit-mask-size: cover;
     width: 104px;
     height: 100px;

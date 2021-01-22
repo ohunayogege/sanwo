@@ -86,3 +86,6 @@ def contact(request):
         else:
             response = {"error": "There was an error. Try again later."}
             return JsonResponse(response)
+
+def teams(request):
+    return render(request, 'team.html')
