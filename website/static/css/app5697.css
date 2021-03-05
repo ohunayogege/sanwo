@@ -979,7 +979,7 @@ nav.wp-calendar-nav {
           background-color: #333;
           
           /* Create the gradient. */
-          background-image: linear-gradient(45deg, #0122af, #fff);
+          background-image: linear-gradient(45deg, #0122af, #0122af);
           
           /* Set the background size and repeat properties. */
           background-size: 100%;
@@ -1006,7 +1006,7 @@ nav.wp-calendar-nav {
           max-width: 850px; } }
       @media (max-width: 991px) {
         .banner--two .shape-bg-image {
-          max-width: 250px; } }
+          max-width: 150px; } }
   .banner--three {
     height: 100vh;
     padding-top: 0; }
