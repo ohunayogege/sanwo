@@ -51,3 +51,12 @@ class Subscriber(models.Model):
 
     def __str__(self):
         return self.email
+
+
+class Partner(models.Model):
+    name = models.CharField(max_length=100, default='')
+    logo = models.ImageField(upload_to='partners')
+    link = models.URLField(blank=True)
+
+    def __str__(self):
+        return self.name

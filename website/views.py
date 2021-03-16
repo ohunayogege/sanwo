@@ -1,4 +1,4 @@
-from website.models import Team, Counter, Testimonial, Subscriber
+from website.models import Partner, Team, Counter, Testimonial, Subscriber
 from django.shortcuts import render
 from django.http import JsonResponse
 from django.conf import settings
@@ -11,10 +11,12 @@ def home(request):
     teams = Team.objects.all()[:4]
     counters = Counter.objects.all()
     testimonies = Testimonial.objects.all()
+    partners = Partner.objects.all().reverse()
     context = {
         'teams': teams,
         'counters': counters,
-        'testimonies': testimonies
+        'testimonies': testimonies,
+        'partners': partners
     }
     return render(request, 'index.html', context)
 

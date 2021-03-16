@@ -1061,6 +1061,7 @@
 </section>
 <!--// End Section -->
 
+{% if partners %}
 <section class="elementor-section elementor-top-section elementor-element elementor-element-b224d2f elementor-section-boxed elementor-section-height-default elementor-section-height-default" data-id="b224d2f" data-element_type="section" data-settings="{&quot;background_background&quot;:&quot;classic&quot;}">
     <div class="elementor-container elementor-column-gap-default">
         <div class="elementor-row">
@@ -1089,86 +1090,13 @@
                                 <div class="dt-logo-carousel">
                                     <div class="swiper-container dt-client-logo" data-logo="{&quot;breakpoints&quot;:{&quot;992&quot;:{&quot;slidesPerView&quot;:6,&quot;spaceBetween&quot;:&quot;30&quot;},&quot;620&quot;:{&quot;slidesPerView&quot;:3,&quot;spaceBetween&quot;:&quot;30&quot;},&quot;320&quot;:{&quot;slidesPerView&quot;:2,&quot;spaceBetween&quot;:&quot;20&quot;}},&quot;loop&quot;:true,&quot;speed&quot;:700,&quot;autoplay&quot;:{&quot;delay&quot;:3000}}">
                                         <div class="swiper-wrapper">
+                                            {% for pat in partners %}
                                             <div class="swiper-slide">
                                                 <div class="client-logo text-center">
-                                                    
-                                                    <img src="https://apdash-wp.themetags.com/wp-content/uploads/2020/10/clients-logo-01.png"  alt="Brand logo">
-                
+                                                    <img src="{{ pat.logo.url }}"  alt="{{ pat.name }}">
                                                 </div>
                                             </div>
-                                            <!-- /.swiper-slide -->
-                                            <div class="swiper-slide">
-                                                <div class="client-logo text-center">
-                                                    <img src="https://apdash-wp.themetags.com/wp-content/uploads/2020/10/clients-logo-02.png"  alt="Brand logo">
-                                                </div>
-                                            </div>
-                                            <!-- /.swiper-slide -->
-                                            <div class="swiper-slide">
-                                                <div class="client-logo text-center">
-                                                    <img src="https://apdash-wp.themetags.com/wp-content/uploads/2020/10/clients-logo-03.png"  alt="Brand logo">
-                                                </div>
-                                            </div>
-                                            <!-- /.swiper-slide -->
-                                            <div class="swiper-slide">
-                                                <div class="client-logo text-center">
-                                                    
-                                                    <img src="https://apdash-wp.themetags.com/wp-content/uploads/2020/10/clients-logo-01.png"  alt="Brand logo">
-                
-                                                </div>
-                                            </div>
-                                            <!-- /.swiper-slide -->
-                                            <div class="swiper-slide">
-                                                <div class="client-logo text-center">
-                                                    <img src="https://apdash-wp.themetags.com/wp-content/uploads/2020/10/clients-logo-02.png"  alt="Brand logo">
-                                                </div>
-                                            </div>
-                                            <!-- /.swiper-slide -->
-                                            <div class="swiper-slide">
-                                                <div class="client-logo text-center">
-                                                    <img src="https://apdash-wp.themetags.com/wp-content/uploads/2020/10/clients-logo-03.png"  alt="Brand logo">
-                                                </div>
-                                            </div>
-                                            <!-- /.swiper-slide -->
-                                            <div class="swiper-slide">
-                                                <div class="client-logo text-center">
-                                                    
-                                                    <img src="https://apdash-wp.themetags.com/wp-content/uploads/2020/10/clients-logo-01.png"  alt="Brand logo">
-                
-                                                </div>
-                                            </div>
-                                            <!-- /.swiper-slide -->
-                                            <div class="swiper-slide">
-                                                <div class="client-logo text-center">
-                                                    <img src="https://apdash-wp.themetags.com/wp-content/uploads/2020/10/clients-logo-02.png"  alt="Brand logo">
-                                                </div>
-                                            </div>
-                                            <!-- /.swiper-slide -->
-                                            <div class="swiper-slide">
-                                                <div class="client-logo text-center">
-                                                    <img src="https://apdash-wp.themetags.com/wp-content/uploads/2020/10/clients-logo-03.png"  alt="Brand logo">
-                                                </div>
-                                            </div>
-                                            <!-- /.swiper-slide -->
-
-                                            <div class="swiper-slide">
-                                                <div class="client-logo text-center">
-                                                    
-                                                    <img src="https://apdash-wp.themetags.com/wp-content/uploads/2020/10/clients-logo-01.png"  alt="Brand logo">
-                
-                                                </div>
-                                            </div>
-                                            <!-- /.swiper-slide -->
-                                            <div class="swiper-slide">
-                                                <div class="client-logo text-center">
-                                                    <img src="https://apdash-wp.themetags.com/wp-content/uploads/2020/10/clients-logo-02.png"  alt="Brand logo">
-                                                </div>
-                                            </div>
-                                            <!-- /.swiper-slide -->
-                                            <div class="swiper-slide">
-                                                <div class="client-logo text-center">
-                                                    <img src="https://apdash-wp.themetags.com/wp-content/uploads/2020/10/clients-logo-03.png"  alt="Brand logo">
-                                                </div>
-                                            </div>
+                                            {% endfor %}
                                             <!-- /.swiper-slide -->
                                         </div>
                                         <!-- /.swiper-wrapper -->
@@ -1184,6 +1112,7 @@
         </div>
     </div>
 </section>
+{% endif %}
 <!--// End Section -->
 
 <section class="elementor-section elementor-top-section elementor-element elementor-element-b7de66c elementor-section-content-middle elementor-section-boxed elementor-section-height-default elementor-section-height-default" data-id="b7de66c" data-element_type="section" id="contact">
