@@ -108,16 +108,16 @@
                         <div class="menu-wrapper">
                             <ul id="menu-primary-menu" class="menu">
                                 <li id="nav-menu-item-17-60061355ca1bd" class="mega-menu-item nav-item menu-item-depth-0 current-menu-ancestor current-menu-parent has-submenu ">
-                                    <a href="/" class="menu-link main-menu-link item-title"><span>Home</span></a>
+                                    <a href="{% url 'home' %}" class="menu-link main-menu-link item-title"><span>Home</span></a>
                                 </li>
                                 <li id="nav-menu-item-18-60061355ca25a" class="mega-menu-item nav-item menu-item-depth-0 ">
-                                    <a href="#about" class="menu-link main-menu-link item-title"><span>About</span></a>
+                                    <a href="{% url 'home' %}#about" class="menu-link main-menu-link item-title"><span>About</span></a>
                                 </li>
                                 <li id="nav-menu-item-19-60061355ca269" class="mega-menu-item nav-item menu-item-depth-0 ">
-                                    <a href="#feature" class="menu-link main-menu-link item-title"><span>Feature</span></a>
+                                    <a href="{% url 'home' %}#feature" class="menu-link main-menu-link item-title"><span>Feature</span></a>
                                 </li>
                                 <li id="nav-menu-item-20-60061355ca278" class="mega-menu-item nav-item menu-item-depth-0 ">
-                                    <a href="#screenshot" class="menu-link main-menu-link item-title"><span>Screenshots</span></a>
+                                    <a href="{% url 'home' %}#screenshot" class="menu-link main-menu-link item-title"><span>Screenshots</span></a>
                                 </li>
                                 <li id="nav-menu-item-21-60061355ca286" class="mega-menu-item nav-item menu-item-depth-0 ">
                                     <a href="{% url 'teams' %}" class="menu-link main-menu-link item-title"><span>Teams</span></a>
@@ -133,7 +133,7 @@
                                     </ul>
                                     </li> -->
                                 <li id="nav-menu-item-22-60061355ca31a" class="mega-menu-item nav-item menu-item-depth-0 ">
-                                    <a href="#contact" class="menu-link main-menu-link item-title"><span>Contact</span></a>
+                                    <a href="{% url 'home' %}#contact" class="menu-link main-menu-link item-title"><span>Contact</span></a>
                                 </li>
                             </ul>
                         </div>
@@ -267,7 +267,7 @@
                                     <a href="#" class="menu-link main-menu-link item-title"><span>Community</span></a>
                                 </li>
                                 <li id="nav-menu-item-84-60061355e30d1" class="mega-menu-item nav-item menu-item-depth-0 ">
-                                    <a href="#" class="menu-link main-menu-link item-title"><span>Our Team</span></a>
+                                    <a href="{% url 'teams' %}" class="menu-link main-menu-link item-title"><span>Our Team</span></a>
                                 </li>
                             </ul>
                         </div>                        

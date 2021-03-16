@@ -744,7 +744,7 @@
                         <section class="elementor-section elementor-inner-section elementor-element elementor-element-568c7d2 elementor-section-boxed elementor-section-height-default elementor-section-height-default" data-id="568c7d2" data-element_type="section">
                             <div class="elementor-container elementor-column-gap-default">
                                 <div class="elementor-row">
-                                    {% for team in teams %}
+
                                     <div class="elementor-column elementor-col-30 elementor-inner-column elementor-element elementor-element-18e0cbc" data-id="18e0cbc" data-element_type="column">
                                         <div class="elementor-column-wrap elementor-element-populated">
                                             <div class="elementor-widget-wrap">
@@ -752,56 +752,46 @@
                                                     <div class="elementor-widget-container">
                                                         <div class="team-member">
                                                             <div class="member-avater">
-                                                                <img src="{{ team.photo.url }}" alt="{{ team.name }}">
+                                                                <img src="/static/images/teams/samson.jpg" alt="Olubayo Samson">
                                                             </div>
                                                             <!-- /.member-avater -->
 
                                                             <div class="team-info">
                                                                 <h5 class="name">
-                                                                    {{ team.name }}
+                                                                    Olubayo Samson
                                                                 </h5>
                                                                 <h6 class="designation">
-                                                                    {{ team.position }}
+                                                                    Founder
                                                                 </h6>
                                                                 <p class="member-short-info">
-                                                                    {{ team.quote }}
+                                                                    Authoritatively engage leading-edge processes tactical capital
                                                                 </p>
                                                                 <ul class="member-social">
-                                                                    {% if team.fb != "#" %}
                                                                     <li class="elementor-repeater-item-fbe7329">
                                                                         <a href="https://facebook.com/{{ team.fb }}" target="_blank">
                                                                             <i aria-hidden="true" class="fab fa-facebook-f"></i>
                                                                         </a>
                                                                     </li>
-                                                                    {% endif %}
-                                                                    {% if team.tw != "#" %}
                                                                     <li class="elementor-repeater-item-7ea259a">
                                                                         <a href="https://twitter.com/{{ team.tw }}" target="_blank">
                                                                             <i aria-hidden="true" class="fab fa-twitter"></i>
                                                                         </a>
                                                                     </li>
-                                                                    {% endif %}
-                                                                    {% if team.ig != "#" %}
                                                                     <li class="elementor-repeater-item-44e5638">
                                                                         <a href="https://instagram.com/{{ team.ig }}" target="_blank">
                                                                             <i aria-hidden="true" class="fab fa-instagram"></i>
                                                                         </a>
                                                                     </li>
-                                                                    {% endif %}
-                                                                    {% if team.li != "#" %}
                                                                     <li class="elementor-repeater-item-3780881">
                                                                         <a href="https://linkedin.com/in/{{ team.li }}" target="_blank">
                                                                             <i aria-hidden="true" class="fab fa-linkedin-in"></i>
                                                                         </a>
                                                                     </li>
-                                                                    {% endif %}
-                                                                    {% if team.web != "#" %}
                                                                     <li class="elementor-repeater-item-3780881">
                                                                         <a href="{{ team.web }}" target="_blank">
                                                                             <i aria-hidden="true" class="fab fa-dribbble"></i>
                                                                         </a>
                                                                     </li>
-                                                                    {% endif %}
                                                                 </ul>
                                                             </div>
                                                         </div><!-- .saaspik-team -->
@@ -810,7 +800,172 @@
                                             </div>
                                         </div>
                                     </div>
-                                    {% endfor %}
+                                    <div class="elementor-column elementor-col-30 elementor-inner-column elementor-element elementor-element-18e0cbc" data-id="18e0cbc" data-element_type="column">
+                                        <div class="elementor-column-wrap elementor-element-populated">
+                                            <div class="elementor-widget-wrap">
+                                                <div class="elementor-element elementor-element-53b1715 elementor-invisible elementor-widget elementor-widget-tt-team" data-id="53b1715" data-element_type="widget" data-settings="{&quot;_animation&quot;:&quot;fadeInRight&quot;,&quot;_animation_delay&quot;:300}" data-widget_type="tt-team.default">
+                                                    <div class="elementor-widget-container">
+                                                        <div class="team-member">
+                                                            <div class="member-avater">
+                                                                <img src="/static/images/teams/ohunayo.jpg" alt="Ohunayo Gege">
+                                                            </div>
+                                                            <!-- /.member-avater -->
+
+                                                            <div class="team-info">
+                                                                <h5 class="name">
+                                                                    Ohunayo Gege
+                                                                </h5>
+                                                                <h6 class="designation">
+                                                                    Backend Developer
+                                                                </h6>
+                                                                <p class="member-short-info">
+                                                                    Pikin wey no get helper suppose get sense.
+                                                                </p>
+                                                                <ul class="member-social">
+                                                                    <li class="elementor-repeater-item-fbe7329">
+                                                                        <a href="https://facebook.com/officialohunayo" target="_blank">
+                                                                            <i aria-hidden="true" class="fab fa-facebook-f"></i>
+                                                                        </a>
+                                                                    </li>
+                                                                    <li class="elementor-repeater-item-7ea259a">
+                                                                        <a href="https://twitter.com/ohunayogege" target="_blank">
+                                                                            <i aria-hidden="true" class="fab fa-twitter"></i>
+                                                                        </a>
+                                                                    </li>
+                                                                    <li class="elementor-repeater-item-44e5638">
+                                                                        <a href="https://instagram.com/ohunayogege" target="_blank">
+                                                                            <i aria-hidden="true" class="fab fa-instagram"></i>
+                                                                        </a>
+                                                                    </li>
+                                                                    <li class="elementor-repeater-item-3780881">
+                                                                        <a href="https://linkedin.com/in/ohunayogege" target="_blank">
+                                                                            <i aria-hidden="true" class="fab fa-linkedin-in"></i>
+                                                                        </a>
+                                                                    </li>
+                                                                    <li class="elementor-repeater-item-3780881">
+                                                                        <a href="{{ team.web }}" target="_blank">
+                                                                            <i aria-hidden="true" class="fab fa-dribbble"></i>
+                                                                        </a>
+                                                                    </li>
+                                                                </ul>
+                                                            </div>
+                                                        </div><!-- .saaspik-team -->
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="elementor-column elementor-col-30 elementor-inner-column elementor-element elementor-element-18e0cbc" data-id="18e0cbc" data-element_type="column">
+                                        <div class="elementor-column-wrap elementor-element-populated">
+                                            <div class="elementor-widget-wrap">
+                                                <div class="elementor-element elementor-element-53b1715 elementor-invisible elementor-widget elementor-widget-tt-team" data-id="53b1715" data-element_type="widget" data-settings="{&quot;_animation&quot;:&quot;fadeInRight&quot;,&quot;_animation_delay&quot;:300}" data-widget_type="tt-team.default">
+                                                    <div class="elementor-widget-container">
+                                                        <div class="team-member">
+                                                            <div class="member-avater">
+                                                                <img src="/static/images/teams/deborah.jpg" alt="Ologundudu Deborah">
+                                                            </div>
+                                                            <!-- /.member-avater -->
+
+                                                            <div class="team-info">
+                                                                <h5 class="name">
+                                                                    Ologundudu Deborah
+                                                                </h5>
+                                                                <h6 class="designation">
+                                                                    UI/UX Designer
+                                                                </h6>
+                                                                <p class="member-short-info">
+                                                                    Authoritatively engage leading-edge processes tactical capital
+                                                                </p>
+                                                                <ul class="member-social">
+                                                                    <li class="elementor-repeater-item-fbe7329">
+                                                                        <a href="https://facebook.com/{{ team.fb }}" target="_blank">
+                                                                            <i aria-hidden="true" class="fab fa-facebook-f"></i>
+                                                                        </a>
+                                                                    </li>
+                                                                    <li class="elementor-repeater-item-7ea259a">
+                                                                        <a href="https://twitter.com/{{ team.tw }}" target="_blank">
+                                                                            <i aria-hidden="true" class="fab fa-twitter"></i>
+                                                                        </a>
+                                                                    </li>
+                                                                    <li class="elementor-repeater-item-44e5638">
+                                                                        <a href="https://instagram.com/{{ team.ig }}" target="_blank">
+                                                                            <i aria-hidden="true" class="fab fa-instagram"></i>
+                                                                        </a>
+                                                                    </li>
+                                                                    <li class="elementor-repeater-item-3780881">
+                                                                        <a href="https://linkedin.com/in/{{ team.li }}" target="_blank">
+                                                                            <i aria-hidden="true" class="fab fa-linkedin-in"></i>
+                                                                        </a>
+                                                                    </li>
+                                                                    <li class="elementor-repeater-item-3780881">
+                                                                        <a href="{{ team.web }}" target="_blank">
+                                                                            <i aria-hidden="true" class="fab fa-dribbble"></i>
+                                                                        </a>
+                                                                    </li>
+                                                                </ul>
+                                                            </div>
+                                                        </div><!-- .saaspik-team -->
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="elementor-column elementor-col-30 elementor-inner-column elementor-element elementor-element-18e0cbc" data-id="18e0cbc" data-element_type="column">
+                                        <div class="elementor-column-wrap elementor-element-populated">
+                                            <div class="elementor-widget-wrap">
+                                                <div class="elementor-element elementor-element-53b1715 elementor-invisible elementor-widget elementor-widget-tt-team" data-id="53b1715" data-element_type="widget" data-settings="{&quot;_animation&quot;:&quot;fadeInRight&quot;,&quot;_animation_delay&quot;:300}" data-widget_type="tt-team.default">
+                                                    <div class="elementor-widget-container">
+                                                        <div class="team-member">
+                                                            <div class="member-avater">
+                                                                <img src="/static/images/teams/elisha.jpg" alt="Eghomware Elisha">
+                                                            </div>
+                                                            <!-- /.member-avater -->
+
+                                                            <div class="team-info">
+                                                                <h5 class="name">
+                                                                    Eghomware Elisha
+                                                                </h5>
+                                                                <h6 class="designation">
+                                                                    Operation Manager
+                                                                </h6>
+                                                                <p class="member-short-info">
+                                                                    Authoritatively engage leading-edge processes tactical capital
+                                                                </p>
+                                                                <ul class="member-social">
+                                                                    <li class="elementor-repeater-item-fbe7329">
+                                                                        <a href="https://facebook.com/{{ team.fb }}" target="_blank">
+                                                                            <i aria-hidden="true" class="fab fa-facebook-f"></i>
+                                                                        </a>
+                                                                    </li>
+                                                                    <li class="elementor-repeater-item-7ea259a">
+                                                                        <a href="https://twitter.com/{{ team.tw }}" target="_blank">
+                                                                            <i aria-hidden="true" class="fab fa-twitter"></i>
+                                                                        </a>
+                                                                    </li>
+                                                                    <li class="elementor-repeater-item-44e5638">
+                                                                        <a href="https://instagram.com/{{ team.ig }}" target="_blank">
+                                                                            <i aria-hidden="true" class="fab fa-instagram"></i>
+                                                                        </a>
+                                                                    </li>
+                                                                    <li class="elementor-repeater-item-3780881">
+                                                                        <a href="https://linkedin.com/in/{{ team.li }}" target="_blank">
+                                                                            <i aria-hidden="true" class="fab fa-linkedin-in"></i>
+                                                                        </a>
+                                                                    </li>
+                                                                    <li class="elementor-repeater-item-3780881">
+                                                                        <a href="{{ team.web }}" target="_blank">
+                                                                            <i aria-hidden="true" class="fab fa-dribbble"></i>
+                                                                        </a>
+                                                                    </li>
+                                                                </ul>
+                                                            </div>
+                                                        </div><!-- .saaspik-team -->
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+
                                 </div>
                             </div>
                         </section>
