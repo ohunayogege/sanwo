@@ -1,3 +1,4 @@
+from django.http.response import HttpResponse
 from website.models import Partner, Team, Counter, Testimonial, Subscriber
 from django.shortcuts import render
 from django.http import JsonResponse
@@ -5,6 +6,11 @@ from django.conf import settings
 from django.template.loader import render_to_string, get_template
 from django.core.mail import message, send_mail, EmailMultiAlternatives
 import os
+import random
+from .utils import details_from_bvn, compare_dates
+from rest_framework.views import APIView
+from rest_framework import status
+from rest_framework.response import Response
 
 
 def home(request):
@@ -21,9 +27,32 @@ def home(request):
     return render(request, 'index.html', context)
 
 
+def unsubscribe(request):
+    user_code = request.GET.get("newsUser", None)
+    if user_code:
+        userCode = user_code
+        context = {
+            "userCode": userCode
+        }
+        return render(request, 'unsubscribe.html', context)
+    return HttpResponse("We could not understand your request. Please follow the link on your email")
+
+
+def activate_user(request):
+    activation = request.GET.get("signature", None)
+    if activation:
+        userCode = activation
+        context = {
+            "userCode": userCode
+        }
+        return render(request, 'activate.html', context)
+    return HttpResponse("We could not understand your request. Please follow the link on your email")
+
 def newsletter(request):
     if request.is_ajax():
         email = request.POST.get("email", None)
+        firstname = request.POST.get("firstname", None)
+        lastname = request.POST.get("lastname", None)
         if email:
             check_email = Subscriber.objects.filter(email=email).exists()
             if check_email == True:
@@ -91,3 +120,35 @@ def contact(request):
 
 def teams(request):
     return render(request, 'team.html')
+
+def cookie_policy(request):
+    return render(request, 'cookies-policy.html')
+
+def dcma(request):
+    return render(request, 'dcma.html')
+
+def privacy_policy(request):
+    return render(request, 'privacy-policy.html')
+
+def terms_condition(request):
+    return render(request, 'terms-conditions.html')
+
+
+def agent(request):
+    return render(request, 'agents.html')
+
+class RunBvnCheck(APIView):
+	def post(self, request):
+		bvn = request.data.get("bvn")
+		dob = request.data.get("dob")
+		reference_no = 'loanx' + str(random.randint(100000000, 999999999))
+		rez = details_from_bvn(bvn, reference_no)
+		if rez == False:
+			return Response({"message": "Error BVN Details"}, status=status.HTTP_400_BAD_REQUEST)
+		else:
+			dob_check = (compare_dates(rez['date_of_birth'], dob))
+			if not dob_check:
+				return Response({"message": "non-matching credentials provided"},
+							status=status.HTTP_400_BAD_REQUEST)
+		
+			return Response({"message": rez}, status=status.HTTP_200_OK)

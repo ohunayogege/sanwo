@@ -1,0 +1,51 @@
+{% extends 'app.html' %}
+
+{% block body %}
+
+<section class="page-header page-header-bg">
+    <div class="container">
+        <div class="page-header_wrapper">
+            <h1 class="page-header_title">
+                Sign Up Completion
+            </h1>
+            <div class="breadcrumb-wrapper">
+                <div class="breadcrumb-inner">
+                    <div class="breadcrumbs">
+                        <a href="{% url 'home' %}">Home</a>
+                        <span class="separator"> <span class="ti-angle-right"></span> </span>
+                        <span> Activate Account</span>
+                    </div>
+                </div><!-- /.breadcrumb-wrapper -->
+            </div>
+        </div>
+        <!-- /.page-title-wrapper -->
+    </div>
+    <!-- /.container -->
+</section>
+<!-- /.page-banner -->
+<section class="elementor-section elementor-top-section elementor-element elementor-element-5186965 elementor-section-boxed elementor-section-height-default elementor-section-height-default" data-id="5186965" data-element_type="section">
+    <div class="elementor-container elementor-column-gap-default">
+        <div class="elementor-row">
+            <div class="elementor-column elementor-col-100 elementor-top-column elementor-element elementor-element-4284c4b" data-id="4284c4b" data-element_type="column">
+                <div class="elementor-column-wrap elementor-element-populated">
+                    <div class="elementor-widget-wrap">
+                        <section class="elementor-section elementor-inner-section elementor-element elementor-element-ec281d0 elementor-section-boxed elementor-section-height-default elementor-section-height-default" data-id="ec281d0" data-element_type="section">
+                            <div class="elementor-container elementor-column-gap-default">
+                                <div class="elementor-row">
+
+                                    <div id="result" class="alert alert-success d-flex h-100 flex-column justify-content-center">
+                                        Your Account has successfully been activated. Kindly login on the mobile App.
+                                    </div>
+
+                                </div>
+                            </div>
+                        </section>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+{% endblock %}
